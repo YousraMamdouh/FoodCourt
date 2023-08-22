@@ -1,6 +1,6 @@
 package com.example.foodcourt.model
 
 interface RepoInterface {
-    suspend fun getAllStores(): List<Store>
+    suspend fun getAllStores(): StoresList
 
 }

@@ -21,7 +21,7 @@ class Repository(var remoteSource:RemoteService):RepoInterface{
         }
     }
 
-    override suspend fun getAllStores(): List<Store> {
+    override suspend fun getAllStores(): StoresList {
         return remoteSource.getAllStores()
     }
 }
