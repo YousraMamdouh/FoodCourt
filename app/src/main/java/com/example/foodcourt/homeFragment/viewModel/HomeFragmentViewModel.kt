@@ -14,6 +14,9 @@ import kotlinx.coroutines.launch
 class HomeFragmentViewModel(private val _repo:RepoInterface): ViewModel() {
     private var _stores: MutableLiveData<List<Store>> = MutableLiveData<List<Store>>()
     val products: LiveData<List<Store>> = _stores
+
+
+
     init {
         getProductsFromAPI()
     }
