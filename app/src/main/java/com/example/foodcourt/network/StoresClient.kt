@@ -3,10 +3,6 @@ import com.example.foodcourt.network.ApiService
 import com.example.foodcourt.network.RemoteService
 import com.example.foodcourt.network.RetrofitHelper
 
-//package com.example.foodcourt.network
-//
-//import com.example.foodcourt.model.StoresList
-//
 class StoresClient: RemoteService {
 
     val apiService: ApiService by lazy {
