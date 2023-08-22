@@ -1,3 +1,4 @@
+import com.example.foodcourt.model.Store
 import com.example.foodcourt.model.StoresList
 import com.example.foodcourt.network.ApiService
 import com.example.foodcourt.network.RemoteService
@@ -22,7 +23,7 @@ class StoresClient: RemoteService {
             }
         }
     }
-    override suspend fun getAllStores(): StoresList {
+    override suspend fun getAllStores(): List<Store>{
         val response =  apiService.getStores()
         return response
     }
