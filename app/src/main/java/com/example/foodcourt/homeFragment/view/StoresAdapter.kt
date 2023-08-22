@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.foodcourt.R
-import com.example.foodcourt.model.Stores
+import com.example.foodcourt.model.Store
 
 class StoresAdapter(
-    private var context: Context, private var array: ArrayList<Stores>,
-) : androidx.recyclerview.widget.ListAdapter<Stores,StoresAdapter.ViewHolder>(MyDiffUtil()) {
+    private var context: Context, private var array: ArrayList<Store>,
+) : androidx.recyclerview.widget.ListAdapter<Store,StoresAdapter.ViewHolder>(MyDiffUtil()) {
 
     var myContext:Context
     init {
@@ -32,7 +32,7 @@ class StoresAdapter(
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentStore:Stores = getItem(position)
+        val currentStore:Store = getItem(position)
       Glide.with(context).load(currentStore.storeLogo).into(holder.StoreImage)
        holder.storeName.text = currentStore.storeName
        holder.storeDescription.text = currentStore.storeDescription
@@ -53,12 +53,12 @@ class StoresAdapter(
 
 }
 
-class MyDiffUtil : DiffUtil.ItemCallback<Stores>() {
-    override fun areItemsTheSame(oldItem: Stores, newItem: Stores): Boolean {
+class MyDiffUtil : DiffUtil.ItemCallback<Store>() {
+    override fun areItemsTheSame(oldItem: Store, newItem: Store): Boolean {
         return oldItem === newItem
     }
 
-    override fun areContentsTheSame(oldItem: Stores, newItem: Stores): Boolean {
+    override fun areContentsTheSame(oldItem: Store, newItem: Store): Boolean {
         return oldItem == newItem
     }
 
