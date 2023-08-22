@@ -1,5 +1,6 @@
 package com.example.foodcourt.model
 
+import android.util.Log
 import com.example.foodcourt.network.RemoteService
 
 class Repository(var remoteSource:RemoteService):RepoInterface{
@@ -22,6 +23,7 @@ class Repository(var remoteSource:RemoteService):RepoInterface{
     }
 
     override suspend fun getAllStores(): List<Store> {
+        //Log.d("Yousra", "Look: ${remoteSource.getAllStores()[0].storeName}")
         return remoteSource.getAllStores()
     }
 }

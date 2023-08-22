@@ -1,6 +1,7 @@
 package com.example.foodcourt.homeFragment.view
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,9 +34,10 @@ class StoresAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentStore:Store = getItem(position)
-      Glide.with(context).load(currentStore.storeLogo).into(holder.StoreImage)
-       holder.storeName.text = currentStore.storeName
-       holder.storeDescription.text = currentStore.storeDescription
+      Glide.with(context).load(currentStore.StoreLogo).placeholder(R.drawable.placeholder_image).into(holder.StoreImage)
+
+       holder.storeName.text = currentStore.StoreName
+       holder.storeDescription.text = currentStore.StoreDescription
 
 
 
