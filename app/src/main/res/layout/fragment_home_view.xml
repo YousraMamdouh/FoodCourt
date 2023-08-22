@@ -26,8 +26,11 @@
         android:layout_marginBottom="16dp"
         android:background="@android:color/holo_red_dark"
         android:iconifiedByDefault="false"
+        android:searchIcon="@null"
+        android:searchHintIcon="@null"
         android:queryHint="@string/searchHint"
         app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:searchIcon="@null"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view" />
