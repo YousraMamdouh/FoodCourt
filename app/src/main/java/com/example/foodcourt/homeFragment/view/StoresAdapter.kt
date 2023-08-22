@@ -53,6 +53,8 @@ class StoresAdapter(
 
     }
 
+
+
 }
 
 class MyDiffUtil : DiffUtil.ItemCallback<Store>() {
