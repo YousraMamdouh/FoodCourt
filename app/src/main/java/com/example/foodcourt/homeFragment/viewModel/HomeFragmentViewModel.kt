@@ -21,7 +21,7 @@ class HomeFragmentViewModel(private val _repo:RepoInterface): ViewModel() {
     private fun getProductsFromAPI()
     {
         viewModelScope.launch(Dispatchers.IO) {
-            _stores.postValue(_repo.getAllStores().products)
+            _stores.postValue(_repo.getAllStores())
         }
     }
 }
